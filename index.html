@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rate</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:400,700&display=swap&subset=latin-ext"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7684054005.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body onload="convert()">
+    
+    <div class="wrapper">
+        <h1>Exchange Rate App</h1>
+
+        <p class="info">Sprawdź aktualne kursy walut!</p>
+
+        <div class="calculator">
+            <div class="section-left">
+                <input type="number" class="input-left" value="1" onchange="convert()" disabled>
+                <select id="currency-left" class="currency-color" onchange="convert()" onclick="changeFontColorL()" >
+                    <option value="1" selected>PLN</option>
+                    <option value="0.18">GBP</option>
+                    <option value="0.21">EUR</option>
+                    <option value="0.2">CHF</option>
+                    <option value="0.2">USD</option>
+                </select>
+            </div>
+            <button><i class="fa-sharp fa-solid fa-arrows-rotate icon"></i></button>
+            <div class="section-right">
+                <input type="number" class="input-right" >
+                <select id="currency-right" class="currency-color" onclick="changeFontColorR()" onchange="convert()">
+                    <option value="1">PLN</option>
+                    <option value="0.18">GBP</option>
+                    <option value="0.21">EUR</option>
+                    <option value="0.2">CHF</option>
+                    <option value="0.2" selected>USD</option>
+                </select>
+            </div>
+        </div>
+
+        <span class="result">1 PLN = 0,2578 USD</span>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
