@@ -16,8 +16,6 @@ const calculate = () => {
             amountTwo.value = (amountOne.value * rate).toFixed(2)
 
             rateInfo.textContent = `1 ${currencyOne.value} = ${rate.toFixed(4)} ${currencyTwo.value}`
-
-
         })
 }      
 
@@ -28,7 +26,7 @@ const swap = () => {
     calculate()
 }
 
-amountOne.addEventListener('keyup', calculate)
+amountOne.addEventListener('input', calculate)
 currencyOne.addEventListener('change', calculate)
 currencyTwo.addEventListener('change', calculate)
 swapBtn.addEventListener('click', swap)

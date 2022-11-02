@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-/* ten CSS w sumie jest do śmieci bo wysrodkowanie aplikacji powinno sie odbyc wlasnie w BODY  a nie we wrapperze - choc tak tez dziala */
+/* ten CSS w sumie moglby byc zmieniony bo wysrodkowanie aplikacji lepiej zeby sie odbyc wlasnie w BODY  a nie we wrapperze - choc tak tez dziala */
 body {
     /* display: flex;
     justify-content: center;
