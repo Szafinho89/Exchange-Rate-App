@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+/* ten CSS w sumie jest do śmieci bo wysrodkowanie aplikacji powinno sie odbyc wlasnie w BODY  a nie we wrapperze - choc tak tez dziala */
 body {
     /* display: flex;
     justify-content: center;
@@ -17,7 +18,8 @@ body {
 .wrapper {
     position: absolute;
     width: 500px;
-    background-image: linear-gradient(200deg, #373b3b 40%, #56545a 80%);    display: flex;
+    background-image: linear-gradient(200deg, #373b3b 40%, #56545a 80%);
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +27,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 0 0 15px black;
+    border: 1px solid black;
 }
 
 h1 {
@@ -37,10 +40,15 @@ h1 {
 p.info {
     margin-bottom: 15px;
     font-size: 20px;
+    font-weight: 200;
 }
 
 .calculator {
     display:flex;
+}
+
+.calculator option {
+    color: #333;
 }
 
 input {
@@ -55,7 +63,7 @@ input {
     font-size: 30px;
     color: aliceblue;
     text-align: center;
-    /* border: none; */
+    border: none;
 }
 
 #currency-left,
@@ -70,6 +78,12 @@ input {
     border: none;
 }
 
+input:focus, 
+select:focus {
+    /* outline:none; */
+    color: rgb(67, 171, 255)
+}
+
 .currency-color {
     color: aliceblue;
 
@@ -78,10 +92,19 @@ input {
 button {
     width: 80px;
     height: 30px;
-    margin-top: 80px;
     border-radius: 20px;
     background-image: linear-gradient(200deg, #75e7f7 20%, #803cff 80%);
     cursor: pointer;
+    /* zamiast marginem przesuwac buttona w dół wystarczy mu dać align-self:flex-end */
+    /* margin-top: 80px; to usuwam */ 
+    align-self: flex-end;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+    background-image: linear-gradient(200deg, #317fcc 20%, #1fc06a 80%);
+    box-shadow: 0 5px 5px black;
 }
 
 .result {
@@ -95,12 +118,4 @@ button {
 
 .icon {
     color: white;
-}
-
-.move-right {
-    transform: translate(220px);
-}
-
-.move-left {
-    transform: translate(-220px);
 }
